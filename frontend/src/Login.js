@@ -1,12 +1,12 @@
-// Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-import './loginStyles.css'; // Import CSS file for login styles
+import { Link, useNavigate } from 'react-router-dom';
+import './loginStyles.css';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -15,8 +15,12 @@ const Login = () => {
         user: { email, password }
       });
       console.log('Login successful', response.data);
-      // Redirect to the welcome page
-      window.location.href = '/welcome';
+      
+      // Extract the username from the response
+      const { username } = response.data;
+
+      // Redirect to the dashboard page after successful login
+      navigate('/dashboard', { state: { username } });
     } catch (error) {
       console.error('Error logging in', error);
     }

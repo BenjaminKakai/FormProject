@@ -8,10 +8,8 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  # Remove the existing fetch_data route
-
-  # Route to fetch data using DataController
-  get 'fetch_data', to: 'data#fetch'
+  # Route to fetch data
+  get 'fetch_data', to: 'welcome#fetch_data'
 
   # Handle OPTIONS requests to /users/sign_in
   match '/users/sign_in', to: 'sessions#options', via: [:options]

@@ -1,3 +1,4 @@
+// Welcome.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
@@ -16,8 +17,8 @@ const Welcome = () => {
         user: { email, username, password }
       });
       console.log('Registration successful', response.data);
-      // Redirect to the thank-you page
-      navigate('/thank-you');
+      // Redirect to the login page after successful registration
+      navigate('/login');
     } catch (error) {
       console.error('Error registering', error);
     }
