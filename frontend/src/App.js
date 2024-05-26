@@ -4,6 +4,7 @@ import Login from './Login.js';
 import Register from './Register.js';
 import DataFetch from './DataFetch';
 import Welcome from './Welcome';
+import ThankYou from './ThankYou';
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/fetch" element={<DataFetch />} />
         <Route path="/welcome" element={<Welcome />} /> {/* Add the route for the Welcome component */}
-        <Route path="/" element={<Register />} />
+        <Route path="/thank-you" element={<ThankYou />} /> {/* Add the route for the thank-you page */}
+        <Route path="/" element={<Welcome />} />
       </Routes>
     </Router>
   );

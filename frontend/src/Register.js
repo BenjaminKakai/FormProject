@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
 
 const Register = () => {
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate(); // Get the navigate function from useNavigate
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -13,8 +15,8 @@ const Register = () => {
         user: { email, username, password }
       });
       console.log('Registration successful', response.data);
-      // Redirect to login page
-      window.location.href = '/login';
+      // Redirect to the thank-you page after successful registration
+      navigate('/thank-you');
     } catch (error) {
       console.error('Error registering', error);
     }
