@@ -12,8 +12,8 @@ const Login = () => {
         user: { email, password }
       });
       console.log('Login successful', response.data);
-      // Redirect to the data fetch page
-      window.location.href = '/fetch';
+      // Redirect to the welcome page
+      window.location.href = '/welcome';
     } catch (error) {
       console.error('Error logging in', error);
     }
