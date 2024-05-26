@@ -1,0 +1,17 @@
+<!-- app/views/data/fetch.html.erb -->
+
+<h1>Fetch Data</h1>
+<%= link_to "Fetch Data", fetch_data_path, class: "btn btn-primary" %>
+
+<% if @formatted_data.present? %>
+  <h2>Fetched Data</h2>
+  <ul>
+    <% @formatted_data.each do |fact| %>
+      <li>
+        <strong>Fact:</strong> <%= fact[:fact] %><br>
+        <strong>Verified:</strong> <%= fact[:verified] %><br>
+        <strong>Created At:</strong> <%= fact[:created_at] %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

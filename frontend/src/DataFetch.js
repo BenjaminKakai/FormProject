@@ -7,7 +7,7 @@ const DataFetch = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/fetch_data');
+        const response = await axios.get('https://cat-fact.herokuapp.com/facts');
         setData(response.data);
       } catch (error) {
         console.error('Error fetching data', error);
@@ -29,11 +29,11 @@ const DataFetch = () => {
           </tr>
         </thead>
         <tbody>
-          {data.map((item, index) => (
+          {data.map((fact, index) => (
             <tr key={index}>
-              <td>{item.fact}</td>
-              <td>{item.verified}</td>
-              <td>{item.created_at}</td>
+              <td>{fact.text}</td>
+              <td>{fact.status.verified.toString()}</td>
+              <td>{new Date(fact.createdAt).toLocaleString()}</td>
             </tr>
           ))}
         </tbody>

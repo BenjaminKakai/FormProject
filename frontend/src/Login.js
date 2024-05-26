@@ -13,6 +13,7 @@ const Login = () => {
       });
       console.log('Login successful', response.data);
       // Redirect to the data fetch page
+      window.location.href = '/fetch';
     } catch (error) {
       console.error('Error logging in', error);
     }

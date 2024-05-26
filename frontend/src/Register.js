@@ -13,7 +13,8 @@ const Register = () => {
         user: { email, username, password }
       });
       console.log('Registration successful', response.data);
-      // Redirect to login page or data fetch page
+      // Redirect to login page
+      window.location.href = '/login';
     } catch (error) {
       console.error('Error registering', error);
     }
