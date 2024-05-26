@@ -1,0 +1,40 @@
+/* registerStyles.css */
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    width: 100px;
+  }
+  
+  input {
+    margin-left: 10px;
+  }
+  
+  .register-button {
+    margin-top: 20px;
+  }
+  
+  .centered-text {
+    text-align: center;
+  }
+  

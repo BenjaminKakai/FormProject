@@ -1,5 +1,8 @@
+// Login.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './loginStyles.css'; // Import CSS file for login styles
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -20,17 +23,24 @@ const Login = () => {
   };
 
   return (
-    <form onSubmit={handleLogin}>
-      <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+    <div className="login-container">
+      <div className="header">
+        <h2>Thank you for signing up to the Facts Zone</h2>
+        <p>Kindly sign in now to proceed.</p>
       </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </div>
-      <button type="submit">Login</button>
-    </form>
+      <form onSubmit={handleLogin} className="login-form">
+        <div className="input-group">
+          <label>Email:</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        <div className="input-group">
+          <label>Password:</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <button type="submit" className="login-button">Login</button>
+      </form>
+      <p className="centered-text">Don't have an account? <Link to="/signup">Sign up here</Link></p>
+    </div>
   );
 };
 

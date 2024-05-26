@@ -1,6 +1,8 @@
+// ThankYou.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import './thankYouStyles.css'; // Import CSS file for thank you styles
 
 const ThankYou = () => {
   const [email, setEmail] = useState('');
@@ -22,21 +24,23 @@ const ThankYou = () => {
   };
 
   return (
-    <div>
-      <h2>Thank you for signing up to the Facts Zone</h2>
-      <p>Kindly sign in now to proceed.</p>
-      <form onSubmit={handleLogin}>
-        <div>
+    <div className="thank-you-container">
+      <div className="header">
+        <h2>Thank you for signing up to the Facts Zone</h2>
+        <p>Kindly sign in now to proceed to the facts page.</p>
+      </div>
+      <form onSubmit={handleLogin} className="login-form">
+        <div className="input-group">
           <label>Email:</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <div>
+        <div className="input-group">
           <label>Password:</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="login-button">Login</button>
       </form>
-      <p>Don't have an account? <Link to="/register">Sign up here</Link></p>
+      <p className="centered-text">Don't have an account? <Link to="/register">Sign up here</Link></p>
     </div>
   );
 };

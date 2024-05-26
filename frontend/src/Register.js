@@ -1,6 +1,8 @@
+// Register.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import './registerStyles.css'; // Import CSS file for register styles
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -23,21 +25,28 @@ const Register = () => {
   };
 
   return (
-    <form onSubmit={handleRegister}>
-      <div>
-        <label>Email:</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+    <div className="register-container">
+      <div className="header">
+        <h2>Thank you for signing up to the Facts Zone</h2>
+        <p>Kindly sign in now to proceed.</p>
       </div>
-      <div>
-        <label>Username:</label>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-      </div>
-      <div>
-        <label>Password:</label>
-        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      </div>
-      <button type="submit">Register</button>
-    </form>
+      <form onSubmit={handleRegister} className="register-form">
+        <div className="input-group">
+          <label>Email:</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        <div className="input-group">
+          <label>Username:</label>
+          <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
+        </div>
+        <div className="input-group">
+          <label>Password:</label>
+          <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        </div>
+        <button type="submit" className="register-button">Register</button>
+      </form>
+      <p className="centered-text">Already have an account? <Link to="/login">Sign in here</Link></p>
+    </div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom';
+import './styles.css';
 
 const Welcome = () => {
   const [email, setEmail] = useState('');
@@ -23,25 +24,27 @@ const Welcome = () => {
   };
 
   return (
-    <div>
-      <h2>Welcome to the Facts Zone</h2>
-      <p>Kindly sign up before proceeding.</p>
-      <form onSubmit={handleRegister}>
-        <div>
+    <div className="container">
+      <div className="header">
+        <h2 className="centered-text">Welcome to the Facts Zone</h2>
+        <p className="centered-text">Kindly sign up before proceeding.</p>
+      </div>
+      <form onSubmit={handleRegister} className="form">
+        <div className="input-group">
           <label>Email:</label>
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
-        <div>
+        <div className="input-group">
           <label>Username:</label>
           <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
-        <div>
+        <div className="input-group">
           <label>Password:</label>
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" className="centered-button">Sign Up</button>
       </form>
-      <p>Already have an account? <Link to="/login">Sign in here</Link></p>
+      <p className="centered-text">Already have an account? <Link to="/login">Sign in here</Link></p>
     </div>
   );
 };

@@ -1,0 +1,54 @@
+/* styles.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f2f2f2; /* Set background color to grey */
+    padding: 20px; /* Add padding to prevent text from being overshadowed */
+  }
+  
+  .header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .centered-text {
+    text-align: center;
+  }
+  
+  .header h2 {
+    color: #2ecc71; /* Set color to light green */
+    font-weight: bold; /* Make text bold */
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .input-group label {
+    width: 100px;
+  }
+  
+  input {
+    margin-left: 10px;
+  }
+  
+  .centered-button {
+    margin-top: 20px;
+  }
+
+body {
+    background-color: #f2f2f2; /* Set background color to grey */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  
