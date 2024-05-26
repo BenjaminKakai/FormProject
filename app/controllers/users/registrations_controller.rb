@@ -3,11 +3,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   private
 
-  def respond_with(resource, _opts = {})
-    render json: UserSerializer.new(resource).serializable_hash.to_json, status: :ok
-  end
-
-  def respond_to_on_destroy
-    head :no_content
+  def sign_up_params
+    params.require(:user).permit(:username, :email, :password, :password_confirmation)
   end
 end

@@ -1,0 +1,7 @@
+<% if user_signed_in? %>
+  <h1>Welcome <%= @username %>!</h1>
+  <%= button_to 'Fetch data...', fetch_data_path, method: :get %>
+<% else %>
+  <h1>Welcome to Starter Online Application</h1>
+  <%= link_to 'Sign up', new_user_registration_path %> or <%= link_to 'Log in', new_user_session_path %>
+<% end %>
