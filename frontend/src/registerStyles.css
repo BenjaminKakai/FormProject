@@ -1,40 +1,71 @@
 /* registerStyles.css */
+body {
+  background-color: #f0f8ff; /* Light grey background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
 .register-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .register-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .input-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .input-group label {
-    width: 100px;
-  }
-  
-  input {
-    margin-left: 10px;
-  }
-  
-  .register-button {
-    margin-top: 20px;
-  }
-  
-  .centered-text {
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px; /* Set a max-width for the form container */
+  width: 100%; /* Ensure it takes the full width up to the max-width */
+  padding: 20px; /* Add some padding */
+  background-color: #ffffff; /* White background for the form container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Ensure the form takes the full width of the container */
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align labels and inputs to the start */
+  margin-bottom: 10px;
+  width: 100%; /* Ensure the input group takes the full width of the form */
+}
+
+.input-group label {
+  margin-bottom: 5px; /* Add some space between label and input */
+}
+
+input {
+  width: 100%; /* Ensure the input takes the full width of the input group */
+  padding: 8px; /* Add some padding for better usability */
+  border: 1px solid #ccc; /* Add a border to the input */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.register-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #32cd32; /* Light green color */
+  color: #ffffff; /* White text */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color: #28a745; /* Darker green on hover */
+}
+
+.centered-text {
+  text-align: center;
+  margin-top: 20px; /* Add some space above the text */
+}

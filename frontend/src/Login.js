@@ -17,7 +17,7 @@ const Login = () => {
       console.log('Login successful', response.data);
       
       // Extract the username from the response
-      const { username } = response.data;
+      const { username } = response.data.user;
 
       // Redirect to the dashboard page after successful login
       navigate('/dashboard', { state: { username } });

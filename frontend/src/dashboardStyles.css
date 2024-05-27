@@ -1,0 +1,45 @@
+/* Set the background color for the entire page */
+body {
+    background-color: #f0f8ff; /* Light grey background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Center the content */
+  .dashboard-container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff; /* White background for the container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Slight shadow for better visibility */
+  }
+  
+  /* Style the welcome message */
+  .welcome-message {
+    color: #32cd32; /* Light green color */
+    font-weight: bold;
+  }
+  
+  /* Style the fetch button */
+  .fetch-button {
+    background-color: #32cd32; /* Light green color */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .fetch-button a {
+    color: #ffffff; /* White text for the link */
+    text-decoration: none;
+  }
+  
+  .fetch-button:hover {
+    background-color: #28a745; /* Darker green on hover */
+  }
+  
